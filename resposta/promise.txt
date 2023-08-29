@@ -1,0 +1,21 @@
+
+Promise:
+-- O que é? 
+
+Uma Promise é um objeto JavaScript que representa a conclusão ou o fracasso de uma operação assíncrona.
+Ela ajuda a lidar com fluxos assíncronos de maneira mais organizada e controlada.
+
+Como funciona? Uma Promise pode estar em três estados: pendente, cumprida ou rejeitada. 
+Ela é criada com um construtor que recebe duas funções: uma para resolver (resolve) 
+o resultado bem-sucedido e outra para rejeitar (reject) caso ocorra um erro.
+
+Tratar com try/catch: Você pode usar o bloco try/catch para capturar erros de Promises. 
+No entanto, o try/catch não captura erros dentro de funções assíncronas que retornam Promises, como o bloco then de uma Promise.
+Portanto, é recomendável usar o método .catch() encadeado com a Promise para lidar com erros.
+
+-- Requisição com Axios:
+
+O Axios é uma biblioteca para fazer requisições HTTP. 
+Ele retorna Promises para lidar com operações assíncronas.
+Para fazer uma requisição com o Axios, você usa a função correspondente ao método 
+HTTP (por exemplo, axios.get() para uma requisição GET) e encadeia métodos .then() e .catch() para lidar com o resultado e os erros.

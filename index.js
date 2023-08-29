@@ -2,18 +2,15 @@ const axios = require('axios')
 
 
 
-const axios = require('axios');
+//Implementar requicisao com axios - requisicao no JasonPlaceHolder 
 
-async function fetchPost() {
-  const apiUrl = 'https://jsonplaceholder.typicode.com/posts/1';
 
-  try {
-    const response = await axios.get(apiUrl);
-    console.log('Resposta:', response.data);
-  } catch (error) {
-    console.error('Ocorreu um erro:', error.message);
-  }
-}
+axios.get('https://jsonplaceholder.typicode.com/posts/1')
+    .then(response => {
+        console.log('Dados da resposta:', response.data);
+    })
+    .catch(error => {
+        console.error('Erro na requisição:', error);
+    });
 
-fetchPost();
 
